@@ -28,11 +28,16 @@ button{
 
 *{
     border: 0;
+    scroll-behavior: smooth;
 }
 body{
     background: center / cover fixed url(../assets/images/bg.jpg);
     font-family: ft-prin, Arial, Helvetica, sans-serif ;
     font-size: 16px;
+    
+    @media screen and (max-width: 680px){
+        font-size: 10px;
+    }
 }
 main{ 
     width: 90%;
@@ -101,6 +106,9 @@ main{
                 &:last-child{
                     margin-right: 3em;
                 }
+            }
+            @media screen and (max-width: 580px){
+                display: none;
             }
         }
     }
@@ -205,6 +213,18 @@ main{
 }
 
 .section3{
+    @media screen and (max-width: 1150px){
+        display: flex;
+        flex-direction: column;
+
+        .blocRight{
+            
+            .bloc1, .bloc2, .bloc3, .bloc4{
+                display: none;
+            }
+        }
+    }
+
     margin-top: 15px;
     background: $lightgrey;
     display: grid;
@@ -224,6 +244,10 @@ main{
             width: 500px;
             margin: auto;
             outline: none;
+            @media screen and (max-width: 650px)
+            {
+                width: 90%;
+            }
         }
         input, textarea{
         border: 1px solid $grey;
@@ -283,21 +307,67 @@ main{
                     flex: 2;
                     text-align: left;
                 }
+
+                @media screen and (max-width: 650px){
+                    height: 0;
+                    padding: 3em 0;
+                }
+                @media screen and (max-width: 350px){
+                    display: none;
+                }
             }
             .bloc4{
-                    border-bottom: none;}
-        }
-    }
+                    border-bottom: none;
 
-    @media screen and (max-width: 1150px){
-        display: flex;
-        flex-direction: column;
+                     ul:last-child{
+                        list-style-type: none;
+                        padding: 0;
+                        display: flex;
+                        justify-content: flex-start;
+                        li{
+                            margin: 2em;
 
-        .blocRight{
-            
-            .bloc1, .bloc2, .bloc3, .bloc4{
-                display: none;
-            }
+                            img{
+                                width: 50px;
+                                height: 50px;
+                            }
+
+                            &:last-child{
+                                margin-right: 3em;
+                            }
+                        }
+                        @media screen and (max-width: 1380px){
+                            li{
+                                margin: 1em;
+
+                                img{
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                        @media screen and (max-width: 1255px){
+                            li{
+                                margin: 0.5em;
+                            }
+                        }
+                        @media screen and (max-width: 1150px){
+                            li{
+                                margin: 2em;
+                            }
+                        }
+                        @media screen and (max-width: 440px){
+                            li{
+                                margin: 1em;
+
+                                img{
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
         }
     }
 }
