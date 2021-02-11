@@ -144,6 +144,9 @@ main{
                 height: 1px;
                 background: $grey;
             }
+            @media screen and (max-width:580px){
+                &::before, &::after{ all: unset;}
+            }
         }
 
         h2{

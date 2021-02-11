@@ -168,6 +168,12 @@ main {
   background: #9b9b9b;
 }
 
+@media screen and (max-width: 580px) {
+  .section1_content .date::before, .section1_content .date::after {
+    all: unset;
+  }
+}
+
 .section1_content h2 {
   font-size: 3em;
   text-transform: uppercase;
